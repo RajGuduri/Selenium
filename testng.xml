@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SmokeTestSuite" >
+  
+  <!--*************************CHrome*************************************************-->
+  <test name="Smoke-Chrome">
+  <parameter name="browser" value="chrome"/>
+  <groups>
+  	<run>
+  		<include name="smoke"/>
+  	</run>
+  </groups> 
+    <classes>
+      <class name="tests.BaseTest"/>
+      <class name="tests.LoginTest"/>
+      
+    </classes>
+  </test> 
+  
+  <!--******************************Firefox*********************************************-->
+  
+  <test name="Smoke-Firefox">
+  <parameter name="browser" value="firefox"/>
+  <groups>
+  	<run>
+  		<include name="smoke"/>
+  	</run>
+  </groups>
+    <classes>
+      <class name="tests.BaseTest"/>
+      <class name="tests.LoginTest"/>
+      
+    </classes>
+  </test>
+  
+  
+<!--************************************Internet Explorer**********************************-->
+  
+  <test name="Smoke-IE">
+  <parameter name="browser" value="ie"/>
+  <groups>
+  	<run>
+  		<include name="smoke"/>
+  	</run>
+  </groups>
+    <classes>
+      <class name="tests.BaseTest"/>
+      <class name="tests.LoginTest"/>
+      
+    </classes>
+  </test>
+  
+  
+  
+</suite> <!-- Suite -->
+
+
+
+<!--**************************************************************************************************************************-->
